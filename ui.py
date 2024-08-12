@@ -1,11 +1,15 @@
 import streamlit as st
 import pickle 
 
+
 class UI:
     def __init__(self):
         # Initialize session state for the data list
         if "data" not in st.session_state:
             st.session_state.data = []
+
+        with open('svc.pkl', 'rb') as file:
+            self.svc_model = pickle.load(file)
 
         # Title and instructions
         st.write("""
@@ -30,4 +34,13 @@ class UI:
             button = st.button('Check Carcinogenicity', on_click=self.predict_carc, args=(st.session_state.data,))
 
     def predict_carc(self, compound_list):
+        pred = self.svm_model.predict(compound_list)
+        if pred == 0:
+            prediction = 'HIGH'
+        elif pred == 1:
+            prediction = 'LOW'
+        elif pred == 2:
+            prediction = 'MODERATE'
+
         st.write(f'The list of compounds is {compound_list}')
+        st.write(f'carcinogenicity of the product {prediction}')
