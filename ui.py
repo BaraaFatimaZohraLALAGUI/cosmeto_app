@@ -1,4 +1,5 @@
 import streamlit as st
+import pickle 
 
 class UI:
     def __init__(self):
