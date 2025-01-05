@@ -1,9 +1,5 @@
         
 
-# Instantiate the UI class
-# from pages.multicomp import UI
-
-
 import streamlit as st
 import base64
 import os  
