@@ -13,7 +13,7 @@ def get_base64_image(image_path):
     
 
 def apply_styling():
-    background_image_path = "cosmeto_app/images/bg.jpg" 
+    background_image_path = "images/bg.jpg" 
     background_image = get_base64_image(background_image_path)
     st.markdown(
         f"""
