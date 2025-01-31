@@ -32,15 +32,15 @@ class UI:
         metric_list = None
         self.carc_model = MPNNLightningModule.load_from_checkpoint('models/uni/model_chemprop_carc.ckpt',
                                                     mp=mp, agg=agg, ffn=ffn_carc, batch_norm=batch_norm, metric_list=metric_list)
-        self.carc_featurizer = torch.load('models/uni/featurizer_carc.pth')
+        self.carc_featurizer = torch.load('models/uni/featurizer_carc.pth', weights_only=False)
 
         self.skin_model = MPNNLightningModule.load_from_checkpoint('models/uni/model_chemprop_skin.ckpt',
                                                     mp=mp, agg=agg, ffn=ffn_skin, batch_norm=batch_norm, metric_list=metric_list)
-        self.skin_featurizer = torch.load('models/uni/featurizer_skin.pth')
+        self.skin_featurizer = torch.load('models/uni/featurizer_skin.pth', weights_only=False)
 
         self.eye_model = MPNNLightningModule.load_from_checkpoint('models/uni/model_chemprop_eye.ckpt',
                                                     mp=mp, agg=agg, ffn=ffn_eye, batch_norm=batch_norm, metric_list=metric_list)
-        self.eye_featurizer = torch.load('models/uni/featurizer_eye.pth')
+        self.eye_featurizer = torch.load('models/uni/featurizer_eye.pth', weights_only=False)
 
         self.smis = ['']
         # Project Description
