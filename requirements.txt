@@ -1,0 +1,7 @@
+streamlit>=1.0.0
+torch>=2.0.0
+pytorch-lightning>=2.0.0
+chemprop==2.1.0
+rdkit>=2023.9.1
+requests>=2.28.0
+transformers>=4.0.0

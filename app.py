@@ -1,9 +1,5 @@
         
 
-# Instantiate the UI class
-# from pages.multicomp import UI
-
-
 import streamlit as st
 import base64
 import os  
@@ -17,7 +13,7 @@ def get_base64_image(image_path):
     
 
 def apply_styling():
-    background_image_path = "images/bg.png"  # Adjust path if necessary
+    background_image_path = "images/bg.jpg" 
     background_image = get_base64_image(background_image_path)
     st.markdown(
         f"""
