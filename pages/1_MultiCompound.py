@@ -30,7 +30,7 @@ class UI:
         st.subheader("🔍 CosmetoCare Multicompound")
         st.markdown(
             """<div style="text-align: center;">
-            <p>In <strong>CosmetoCare Multicompound</strong>, take the list of compounds in your cosmetic product enter it, and check if the product you're product might be harmful, whether it can cause eye irritation, skin irritation or if it is carcinogenic </p>
+            <p>In <strong>CosmetoCare MultiCompound</strong>, take the list of compounds in your cosmetic product enter it, and check if the product you're using might be harmful, whether it can cause eye irritation, skin irritation or if it is carcinogenic </p>
             </div>""",
             unsafe_allow_html=True
         )
